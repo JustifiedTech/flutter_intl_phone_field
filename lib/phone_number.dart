@@ -90,7 +90,8 @@ class PhoneNumber {
     if (code != null) {
       return countries.firstWhere(
         (country) =>
-          country.code == code,
+            country.code == code &&
+            phoneNumber.startsWith(country.dialCode + country.regionCode),
       );
     }
     return countries.firstWhere(
