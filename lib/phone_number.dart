@@ -53,7 +53,7 @@ class PhoneNumber {
   }
 
   bool isValidNumber() {
-    Country country = getCountry(completeNumber);
+    Country country = getCountry(completeNumber, countryISOCode);
     if (number.length < country.minLength) {
       return false;
     }
@@ -68,7 +68,7 @@ class PhoneNumber {
     return countryCode + number;
   }
 
-  static Country getCountry(String phoneNumber) {
+  static Country getCountry(String phoneNumber, [String? code]) {
     if (phoneNumber == "") {
       return countries.firstWhere((country) => country.code == "IN");
     }
@@ -86,8 +86,16 @@ class PhoneNumber {
             .startsWith(country.dialCode + country.regionCode),
       );
     }
+
+    if (code != null) {
+      return countries.firstWhere(
+        (country) =>
+          country.code == code,
+      );
+    }
     return countries.firstWhere(
       (country) =>
+          
           phoneNumber.startsWith(country.dialCode + country.regionCode),
     );
   }
