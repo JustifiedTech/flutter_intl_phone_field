@@ -82,8 +82,9 @@ class PhoneNumber {
     if (code != null) {
       return countries.firstWhere(
         (country) =>
-            country.code == code &&
-            phoneNumber.startsWith(country.dialCode + country.regionCode),
+          country.code.toLowerCase() == code.toLowerCase() &&
+          (phoneNumber.startsWith(country.dialCode) ||
+              phoneNumber.substring(1).startsWith(country.dialCode))
       );
     }
 
