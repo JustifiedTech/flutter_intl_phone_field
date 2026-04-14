@@ -79,6 +79,14 @@ class PhoneNumber {
       return countries.firstWhere((element) => element.code == "IN");
     }
 
+    if (code != null) {
+      return countries.firstWhere(
+        (country) =>
+            country.code == code &&
+            phoneNumber.startsWith(country.dialCode + country.regionCode),
+      );
+    }
+
     if (phoneNumber.startsWith('+')) {
       return countries.firstWhere(
         (country) => phoneNumber
@@ -87,13 +95,6 @@ class PhoneNumber {
       );
     }
 
-    if (code != null) {
-      return countries.firstWhere(
-        (country) =>
-            country.code == code &&
-            phoneNumber.startsWith(country.dialCode + country.regionCode),
-      );
-    }
     return countries.firstWhere(
       (country) =>
           
