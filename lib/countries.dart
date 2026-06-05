@@ -1,7 +1,7 @@
 // see: https://en.wikipedia.org/wiki/List_of_country_calling_codes
 // for list of country/calling codes
 
-const List<Country> countries = [
+List<Country> countries = [
   Country(
     name: "Afghanistan",
     nameTranslations: {
@@ -5058,38 +5058,38 @@ const List<Country> countries = [
     minLength: 8,
     maxLength: 8,
   ),
-  // Country(
-  //   name: "Nigeria",
-  //   nameTranslations: {
-  //     "sk": "Nigéria",
-  //     "se": "Nigeria",
-  //     "pl": "Nigeria",
-  //     "no": "Nigeria",
-  //     "ja": "ナイジェリア",
-  //     "it": "Nigeria",
-  //     "zh": "尼日利亚",
-  //     "nl": "Nigeria",
-  //     "de": "Nigeria",
-  //     "fr": "Nigéria",
-  //     "es": "Nigeria",
-  //     "en": "Nigeria",
-  //     "pt_BR": "Nigéria",
-  //     "sr-Cyrl": "Нигерија",
-  //     "sr-Latn": "Nigerija",
-  //     "zh_TW": "奈及利亞",
-  //     "tr": "Nijerya",
-  //     "ro": "Nigeria",
-  //     "ru": "Нигерия",
-  //     "ar": "نيجيريا",
-  //     "fa": "نیجریه",
-  //     "yue": "尼日利亞"
-  //   },
-  //   flag: "🇳🇬",
-  //   code: "NG",
-  //   dialCode: "234",
-  //   minLength: 10,
-  //   maxLength: 11,
-  // ),
+  Country(
+    name: "Nigeria",
+    nameTranslations: {
+      "sk": "Nigéria",
+      "se": "Nigeria",
+      "pl": "Nigeria",
+      "no": "Nigeria",
+      "ja": "ナイジェリア",
+      "it": "Nigeria",
+      "zh": "尼日利亚",
+      "nl": "Nigeria",
+      "de": "Nigeria",
+      "fr": "Nigéria",
+      "es": "Nigeria",
+      "en": "Nigeria",
+      "pt_BR": "Nigéria",
+      "sr-Cyrl": "Нигерија",
+      "sr-Latn": "Nigerija",
+      "zh_TW": "奈及利亞",
+      "tr": "Nijerya",
+      "ro": "Nigeria",
+      "ru": "Нигерия",
+      "ar": "نيجيريا",
+      "fa": "نیجریه",
+      "yue": "尼日利亞",
+    },
+    flag: "🇳🇬",
+    code: "NG",
+    dialCode: "234",
+    minLength: 10,
+    maxLength: 11,
+  ),
   Country(
     name: "Niue",
     nameTranslations: {
